@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from views import ClassifyView
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^textclassifier/', include('textclassifiers.urls'), name='classify'),
+    url('', ClassifyView.as_view(template_name="classify.html")),
 ]
